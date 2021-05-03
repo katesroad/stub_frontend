@@ -1,0 +1,44 @@
+[data-reach-dialog-content] {
+  .btn--close {
+    &.at-with-auth {
+      position: absolute;
+      right: 1rem;
+      top: 1.5rem;
+      display: block;
+    }
+  }
+  .auth-form {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    .title {
+      padding-bottom: 1rem !important;
+    }
+    form {
+      padding: 0;
+    }
+  }
+  button {
+    margin-right: 1rem;
+    &.btn--cancel {
+      background-color: var(--bs-secondary);
+    }
+  }
+  p {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    &.alert-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &.switch-type {
+      button {
+        padding: 0.25rem 0.5rem;
+        background-color: transparent;
+        color: var(--bs-blue);
+        text-decoration: underline;
+      }
+    }
+  }
+}

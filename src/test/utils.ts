@@ -1,6 +1,7 @@
 import { render as rtlRender } from '@testing-library/react'
+import { renderHook } from '@testing-library/react-hooks'
 import userEvent from '@testing-library/user-event'
-import AppProviders from 'context'
+import AppProviders, { QueryProvider } from 'context'
 import React from 'react'
 
 type RenderConf = {
@@ -11,5 +12,10 @@ const renderUI = (ui: React.ReactElement, conf?: RenderConf) => {
   return rtlRender(ui, options)
 }
 
+const renderQueryHook = (hook: any, conf?: RenderConf) => {
+  const options = { wrapper: QueryProvider }
+  return renderHook(() => hook(), options)
+}
+
 export * from '@testing-library/react'
-export { renderUI, AppProviders, userEvent }
+export { renderUI, renderQueryHook, AppProviders, QueryProvider, userEvent }

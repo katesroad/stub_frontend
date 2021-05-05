@@ -6,4 +6,7 @@ export const handlers = [
   rest.get(apiUrl('auth/token'), async (req, res, ctx) => {
     return res(ctx.json({ id: Date.now() }))
   }),
+  rest.get(apiUrl('orders'), async (req, res, ctx) => {
+    return res(ctx.json([]))
+  }),
 ]

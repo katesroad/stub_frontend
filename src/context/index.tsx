@@ -5,17 +5,20 @@ import GlobalStyles from 'styles/GlobalStyle'
 import { AuthProvider } from './auth.context'
 import { ThemeProvider } from './theme.context'
 
-const client = new QueryClient()
+export const client = new QueryClient()
+export const QueryProvider: React.FC = ({ children }) => (
+  <QueryClientProvider client={client}>{children}</QueryClientProvider>
+)
 const AppProviders: React.FC = ({ children }) => {
   return (
     <>
       <GlobalStyles />
       <ThemeProvider>
-        <QueryClientProvider client={client}>
+        <QueryProvider>
           <AuthProvider>
             <BrowserRouter>{children}</BrowserRouter>
           </AuthProvider>
-        </QueryClientProvider>
+        </QueryProvider>
       </ThemeProvider>
     </>
   )

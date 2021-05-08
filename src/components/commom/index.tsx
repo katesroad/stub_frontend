@@ -2,9 +2,6 @@
 import styled from 'styled-components/macro'
 import { ImSpinner6 } from 'react-icons/im'
 
-export * from './styled'
-export * from './button'
-
 export const FullscreenSpinner = () => {
   return (
     <div
@@ -17,7 +14,6 @@ export const FullscreenSpinner = () => {
         align-items: center;
         justify-content: center;
         font-size: 3rem;
-        background: var(--body-background);
       `}
     >
       <ImSpinner6 />
@@ -27,9 +23,9 @@ export const FullscreenSpinner = () => {
 
 export const Spinner = () => <ImSpinner6 />
 
-export const Error = styled.div`
-  color: var(--bs-red);
-  &:empty {
-    display: none;
-  }
-`
+export * from './styled'
+export * from './button'
+export * from './withAuth'
+export * from './modal'
+export * from './AuthForm'
+export * from './form'

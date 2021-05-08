@@ -1,4 +1,4 @@
-import AuthForm from 'components/AuthForm'
+import AuthForm from 'components/commom/AuthForm'
 import { useLogin } from 'hooks/auth.hooks'
 import * as React from 'react'
 

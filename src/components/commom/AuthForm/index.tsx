@@ -4,8 +4,8 @@ import { initialValues, AuthSchema } from './auth.helper'
 import { Wrapper } from './styles'
 import { UseMutationResult } from 'react-query'
 import { User } from 'types'
-import { Input } from 'components/lib/form/Input'
-import { Button, Error } from 'components/lib'
+import { Input } from 'components/commom'
+import { Button, Error } from 'components/commom'
 
 type AuthFormProps = {
   mutation: UseMutationResult<User | null>

@@ -2,7 +2,9 @@ import * as React from 'react'
 import { Dialog } from '@reach/dialog'
 import './style.scss'
 
-const callAll = (...fns: any[]) => (...args: any) =>
+type Func = (args?: unknown) => void
+
+const callAll = (...fns: Func[]) => (...args: unknown[]) =>
   fns.forEach((fn) => {
     try {
       fn && fn(...args)
@@ -37,14 +39,18 @@ export const ModalContentBase: React.FC<unknown> = ({ children, ...props }) => {
   )
 }
 
+// eslint-disable-next-line
 export function ModalCloseBtn({ children: child, ...props }: any) {
   const [, setIsOpen] = React.useContext(ModalContext)
+  const { className = '', ...rest } = props
   return React.cloneElement(child, {
     onClick: callAll(() => setIsOpen(false), child.props.onClick),
-    ...props,
+    ...rest,
+    className: `${className} btn--close`,
   })
 }
 
+// eslint-disable-next-line
 export function ModalOpenBtn({ children: child }: any) {
   const [, setIsOpen] = React.useContext(ModalContext)
   return React.cloneElement(child, {

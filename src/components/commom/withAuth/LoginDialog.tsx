@@ -1,8 +1,8 @@
-import AuthForm from 'components/AuthForm'
+import AuthForm from 'components/commom/AuthForm'
 import * as React from 'react'
 import { VscClose } from 'react-icons/vsc'
 import { useLogin, useRegister } from 'hooks/auth.hooks'
-import { Modal, ModalContentBase } from 'components/lib/modal'
+import { Modal, ModalContentBase } from 'components/commom/modal'
 
 type LoginDialogProps = {
   value: [boolean, (show: boolean) => void]

@@ -27,3 +27,10 @@ export const Card = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.375rem;
 `
+
+export const Error = styled.div`
+  color: var(--bs-red);
+  &:empty {
+    display: none;
+  }
+`

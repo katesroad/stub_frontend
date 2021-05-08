@@ -1,11 +1,11 @@
 import { useAuth } from 'context/auth.context'
 import * as React from 'react'
 import { AlertDialog, AlertDialogLabel } from '@reach/alert-dialog'
-import { Button } from 'components/lib'
+import { Button } from 'components/commom'
 import LoginDialog from './LoginDialog'
 import './style.scss'
 
-type WithAuthOptions = {
+export type WithAuthOptions = {
   content: React.ReactNode
   [key: string]: unknown
 }

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useGetUser } from 'hooks/auth.hooks'
 import { User } from 'types'
-import { FullscreenSpinner } from 'components/lib'
+import { FullscreenSpinner } from 'components/commom'
 
 type AuthContextType = { user: User | null | undefined }
 

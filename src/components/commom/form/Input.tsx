@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Field, ErrorMessage, useField } from 'formik'
-import { Error } from 'components/lib'
+import { Error } from 'components/commom'
 import { FormControl } from './styles'
 
 export interface InputProps {

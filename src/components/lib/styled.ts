@@ -27,21 +27,3 @@ export const Card = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.375rem;
 `
-
-export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
-  text-transform: capitalize;
-  color: var(--bs-white);
-  background-color: transparent;
-  ${xlarge} {
-    padding: 0.35rem 0.5rem;
-  }
-  // spinner
-  svg {
-    margin-left: 0.5rem;
-  }
-`

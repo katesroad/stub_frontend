@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 import { ImSpinner6 } from 'react-icons/im'
 
 export * from './styled'
+export * from './button'
 
 export const FullscreenSpinner = () => {
   return (

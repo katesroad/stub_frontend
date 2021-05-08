@@ -8,7 +8,6 @@ export default {
 }
 
 const Template: Story<InputProps> = (args: InputProps) => {
-  const handleSubmit = () => {}
   const initialValues = {}
   return (
     <Formik onSubmit={() => {}} initialValues={initialValues}>
@@ -28,5 +27,3 @@ TextInput.args = {
   name: 'username',
   label: 'user name',
 }
-
-export const PasswordInput = Template.bind({})

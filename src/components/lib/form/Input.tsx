@@ -14,21 +14,16 @@ const Input: React.FC<InputProps> = ({
   label,
   placeholder,
   type = 'text',
-  ...props
 }: InputProps) => {
-  const [field, meta] = useField({ name, type, ...props })
-  const eleId = `input-${name}`
+  const [field, meta] = useField({ name })
   const error = meta.touched && meta.error
   return (
-    <FormControl {...props}>
-      {label ? <label htmlFor={eleId}>{label}</label> : null}
+    <FormControl className={error ? 'form-control has-error' : 'form-control'}>
+      {label ? <span className="label">{label}</span> : null}
       <Field
         {...field}
-        name={name}
-        id={eleId}
         type={type}
         placeholder={placeholder || `Enter ${name}`}
-        className={error ? 'has-error' : ''}
       />
       <Error className="error-msg" as="small" aria-label="error-message">
         <ErrorMessage name={name} />

@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-
+import { createGlobalStyle } from 'styled-components'
+import { colors } from 'styles/colors'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -11,11 +11,7 @@ const GlobalStyles = createGlobalStyle`
   body::-webkit-scrollbar {
     width: 8px;
   }
-  body {
-    font-family: Roboto,Helvetica Neue,sans-serif;
-  }
-  
-  body::-webkit-scrollbar-track {
+    body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
   
@@ -24,6 +20,10 @@ const GlobalStyles = createGlobalStyle`
     outline: 1px solid slategrey;
   }
 
+  body {
+    font-family: Roboto,Helvetica Neue,sans-serif;
+  }
+  
   a,
   button,
   input,
@@ -63,12 +63,16 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
-  html {
+  :root {
+     // css variables
+    --color-c1: ${colors.c1};
+    --color-c2: ${colors.c2};
+    --color-c3: ${colors.c3};
+    --color-c4: ${colors.c4};
+    --weight-bolder: 700;
+    --weight-bold: 500;
+    --weight-normal: 400;
+    --weight-thin: 300;
   }
- 
-  body[data-theme="dark"] {
-  }
-  body[data-theme="light"] {
-  }
-`;
-export default GlobalStyles;
+`
+export default GlobalStyles

@@ -1,4 +1,5 @@
-import AppProviders from '../src/context'
+import AppProviders from '../src/context/index'
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -9,11 +10,4 @@ export const parameters = {
   },
 }
 
-// Global decorator to apply the styles to all stories
-export const decorators = [
-  (Story) => (
-    <AppProviders>
-      <Story />
-    </AppProviders>
-  ),
-]
+export const decorators = [(Story) => <AppProviders><Story /></AppProviders>]

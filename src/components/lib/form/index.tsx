@@ -1,2 +1,1 @@
-export * from './Textarea'
-export * from './TextField'
+export * from './Input'

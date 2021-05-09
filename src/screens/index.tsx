@@ -1,5 +1,6 @@
 import { Content } from 'components/commom'
 import { CategoryTickets } from 'components/home/CategoryTickets'
+import PromotedTickets from 'components/home/PromotedTickets'
 import * as React from 'react'
 
 export default function IndexScreen() {
@@ -8,7 +9,7 @@ export default function IndexScreen() {
       id: 'abc',
       name: 'Gensis Ticket',
       imgs: [
-        'https://media.stubhubstatic.com/stubhub-catalog/d_defaultLogo.jpg/t_f-fs-0fv,q_auto:low,f_auto,c_fill,$w_280_mul_3,$h_180_mul_3/performer/723372/6c1cc567cfd1045632c0826592c320e2',
+        'https://res.cloudinary.com/dmossrfdg/image/upload/v1618562249/projects/yelp/251959.0.3dcbc371-a9d2-492e-b98d-749baf003e44.jpg',
       ],
       category: 'Concert',
     },
@@ -16,7 +17,7 @@ export default function IndexScreen() {
       id: 'abcd',
       name: 'Gensis Ticket',
       imgs: [
-        'https://media.stubhubstatic.com/stubhub-catalog/d_defaultLogo.jpg/t_f-fs-0fv,q_auto:low,f_auto,c_fill,$w_280_mul_3,$h_180_mul_3/performer/723372/6c1cc567cfd1045632c0826592c320e2',
+        'https://res.cloudinary.com/dmossrfdg/image/upload/v1618562249/projects/yelp/251959.0.3dcbc371-a9d2-492e-b98d-749baf003e44.jpg',
       ],
       category: 'Concert',
     },
@@ -24,7 +25,7 @@ export default function IndexScreen() {
       id: 'abec',
       name: 'Gensis Ticket',
       imgs: [
-        'https://media.stubhubstatic.com/stubhub-catalog/d_defaultLogo.jpg/t_f-fs-0fv,q_auto:low,f_auto,c_fill,$w_280_mul_3,$h_180_mul_3/performer/723372/6c1cc567cfd1045632c0826592c320e2',
+        'https://res.cloudinary.com/dmossrfdg/image/upload/v1618562249/projects/yelp/251959.0.3dcbc371-a9d2-492e-b98d-749baf003e44.jpg',
       ],
       category: 'Concert',
     },
@@ -32,14 +33,18 @@ export default function IndexScreen() {
       id: 'abcf',
       name: 'Gensis Ticket',
       imgs: [
-        'https://media.stubhubstatic.com/stubhub-catalog/d_defaultLogo.jpg/t_f-fs-0fv,q_auto:low,f_auto,c_fill,$w_280_mul_3,$h_180_mul_3/performer/723372/6c1cc567cfd1045632c0826592c320e2',
+        'https://res.cloudinary.com/dmossrfdg/image/upload/v1618562249/projects/yelp/251959.0.3dcbc371-a9d2-492e-b98d-749baf003e44.jpg',
       ],
       category: 'Concert',
     },
   ]
+  const promotedTickets = tickets.map((ticket) => {
+    return { ...ticket, description: ticket.name + Math.random().toString() }
+  })
+
   return (
     <Content>
-      <h4>home page</h4>
+      <PromotedTickets tickets={promotedTickets} />
       <CategoryTickets tickets={tickets} category={'concert'} />
       <CategoryTickets tickets={tickets} category={'sports'} />
       <CategoryTickets tickets={tickets} category={'shows'} />

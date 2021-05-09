@@ -1,7 +1,9 @@
+import * as React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
-import OrderScreen from 'screens/order'
-import OrdersScreen from 'screens/orders'
-import TicketsScreen from 'screens/tickets'
+
+const TicketsScreen = React.lazy(() => import('./screens/tickets'))
+const OrderScreen = React.lazy(() => import('./screens/order'))
+const OrdersScreen = React.lazy(() => import('./screens/tickets'))
 
 export default function AuthedApp() {
   return (

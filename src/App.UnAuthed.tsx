@@ -1,7 +1,8 @@
-import React from 'react'
+import * as React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import LoginScreen from 'screens/login'
-import RegisterScreen from 'screens/register'
+
+const LoginScreen = React.lazy(() => import('./screens/login'))
+const RegisterScreen = React.lazy(() => import('./screens/register'))
 
 export default function UnAuthedApp() {
   return (

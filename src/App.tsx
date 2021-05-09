@@ -1,13 +1,14 @@
+import * as React from 'react'
 import AuthedApp from 'App.Authed'
 import UnAuthedApp from 'App.UnAuthed'
 import { useAuth } from 'context/auth.context'
 import { Route, Switch } from 'react-router-dom'
 import IndexScreen from 'screens'
-import TicketScreen from 'screens/ticket'
+
+const TicketScreen = React.lazy(() => import('./screens/ticket'))
 
 function App() {
   const { user } = useAuth()
-  console.log(user)
   return (
     <Switch>
       <Route path="/" exact component={IndexScreen} />

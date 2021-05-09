@@ -1,3 +1,4 @@
+import { Spinner, ErrorBoundaryWrap } from 'components/commom'
 import * as React from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter } from 'react-router-dom'
@@ -14,7 +15,11 @@ const AppProviders: React.FC = ({ children }) => {
       <GlobalStyles />
       <QueryProvider>
         <AuthProvider>
-          <BrowserRouter>{children}</BrowserRouter>
+          <BrowserRouter>
+            <React.Suspense fallback={<Spinner />}>
+              <ErrorBoundaryWrap>{children}</ErrorBoundaryWrap>
+            </React.Suspense>
+          </BrowserRouter>
         </AuthProvider>
       </QueryProvider>
     </>

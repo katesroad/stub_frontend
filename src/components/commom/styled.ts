@@ -18,14 +18,14 @@ export const Content = styled.div`
     margin-right: auto;
   }
   ${xlarge} {
-    max-width: 68.75rem;
+    max-width: 72.5rem;
   }
 `
 
 export const Card = styled.div`
-  padding: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.375rem;
+  border: 1px solid #ecedee;
+  border-radius: 0.25rem;
+  overflow: hidden;
 `
 
 export const Error = styled.div`

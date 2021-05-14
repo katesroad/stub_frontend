@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
       font-family: Arial, sans-serif;
       padding-bottom: 0.5rem;
       font-size: x-large;
-      font-weight: 900;
+      font-weight: var(--weight-bolder);
       margin-top: 0.5rem;
     }
 
@@ -88,11 +88,11 @@ export const Wrapper = styled.div`
 
     .information {
       text-align: center;
-      font-weight: 300;
+      font-weight: var(--weight-thin);
       font-size: small;
 
       a {
-        font-weight: 900;
+        font-weight: var(--weight-bolder);
 
         :hover {
           text-decoration: underline;

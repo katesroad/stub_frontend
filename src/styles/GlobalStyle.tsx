@@ -70,6 +70,7 @@ const GlobalStyles = createGlobalStyle`
     --color-c3: ${colors.c3};
     --color-c4: ${colors.c4};
     --color-c5: ${colors.c5};
+    --color-c6: ${colors.c6};
     --weight-bolder: 700;
     --weight-bold: 500;
     --weight-normal: 400;

@@ -2,11 +2,13 @@ import styled from 'styled-components'
 
 export const FormControl = styled.label`
   display: block;
+  position: relative;
   margin-bottom: 1rem;
   color: var(--color-c3);
 
   &.has-error {
     color: var(--color-c1);
+
     input {
       border-color: var(--color-c1);
     }
@@ -31,6 +33,14 @@ export const FormControl = styled.label`
     border: 1px solid var(--color-c3);
     appearance: none;
     border-radius: 0.25rem;
+  }
+
+  .eye {
+    position: absolute;
+    right: .5rem;
+    top: 1.5rem;
+    color: var(--color-c3);
+    font-size: x-large;
   }
 
   .error-msg {

@@ -18,10 +18,10 @@ export const Wrapper = styled.div`
 
     .form-title {
       font-family: Arial, sans-serif;
-      padding-bottom: .5rem;
+      padding-bottom: 0.5rem;
       font-size: x-large;
       font-weight: 900;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
     }
 
     .icon {
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
       font-size: small;
       color: var(--color-c5);
       padding-bottom: 2rem;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
     }
 
     button[type='submit'] {
@@ -45,14 +45,12 @@ export const Wrapper = styled.div`
       font-weight: 900;
       background-color: var(--color-c2);
       border-color: var(--color-c2);
-      transition: opacity .1s;
+      transition: opacity 0.1s;
       margin-bottom: 2rem;
 
-
       :hover {
-        opacity: .8;
-        transition: opacity .1s;
-
+        opacity: 0.8;
+        transition: opacity 0.1s;
       }
     }
 
@@ -86,16 +84,13 @@ export const Wrapper = styled.div`
       }
 
       /* Mozilla Firefox 19+ */
-
     }
-
 
     .information {
       text-align: center;
       font-weight: 300;
       font-size: small;
-      
-      
+
       a {
         font-weight: 900;
 
@@ -104,12 +99,11 @@ export const Wrapper = styled.div`
         }
       }
     }
-    
-    .login-error{
-      text-align: left;
-      margin-top: -.8rem;
-      padding-bottom: 1rem;
 
+    .login-error {
+      text-align: left;
+      margin-top: -0.8rem;
+      padding-bottom: 1rem;
     }
   }
 `

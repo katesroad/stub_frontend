@@ -1,9 +1,13 @@
-const c1 = 'red'
-const c2 = '#7e3af2'
-const c3 = '#8f939b'
-const c4 = '#6aff79'
-const c5 = '#575D69'
-const c6 = '#DADBDE'
-const c7 = '#161e2e'
+const c1 = '#7e3af2'
+const c2 = '#161E2E'
+const c3 = '#575D69'
+const c4 = '#6A6F79'
+const c5 = '#8F939B'
+const c6 = '#B4B7BC'
+const c7 = '#DADBDE'
+const c8 = '#ECEDEE'
+const c9 = '#43BD25'
+const c10 = '#D32020'
+const c11 = '#ECBB0D'
 
-export const colors = { c1, c2, c3, c4, c5, c6, c7 }
+export const colors = { c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11 }

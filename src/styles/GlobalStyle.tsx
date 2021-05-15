@@ -14,16 +14,16 @@ const GlobalStyles = createGlobalStyle`
     body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
-  
   body::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
   }
-
   body {
     font-family: Inter, Roboto,Helvetica Neue,sans-serif;
   }
-  
+   html, body {
+    height: 100%;
+  }
   a,
   button,
   input,
@@ -34,10 +34,11 @@ const GlobalStyles = createGlobalStyle`
     border:none;
     appearance:none;
   }
-
   ul,
   li {
-    list-style: none
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   a,
@@ -46,9 +47,12 @@ const GlobalStyles = createGlobalStyle`
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
   a {
+    color: inherit;
     text-decoration:none;
   }
-
+  a:active {
+    color: inherit
+  }
   button[disabled] {
     cursor: not-allowed;
   }
@@ -59,18 +63,18 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
   }
 
-  html, body {
-    height: 100%;
-  }
-
   :root {
-     // css variables
     --color-c1: ${colors.c1};
     --color-c2: ${colors.c2};
     --color-c3: ${colors.c3};
     --color-c4: ${colors.c4};
     --color-c5: ${colors.c5};
     --color-c6: ${colors.c6};
+    --color-c7: ${colors.c7};
+    --color-c8: ${colors.c8};
+    --color-c9: ${colors.c9};
+    --color-c10: ${colors.c10};
+    --color-c11: ${colors.c11};
     --weight-bolder: 700;
     --weight-bold: 500;
     --weight-normal: 400;

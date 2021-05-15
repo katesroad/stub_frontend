@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: Inter, Roboto,Helvetica Neue,sans-serif;
+    background-color: #E5E5E5;
   }
    html, body {
     height: 100%;
@@ -75,6 +76,7 @@ const GlobalStyles = createGlobalStyle`
     --color-c9: ${colors.c9};
     --color-c10: ${colors.c10};
     --color-c11: ${colors.c11};
+    --color-c12: ${colors.c12};
     --weight-bolder: 700;
     --weight-bold: 500;
     --weight-normal: 400;

@@ -36,6 +36,7 @@
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/no-empty-function": 0,
     "jest/expect-expect": 0,
-    "react-hooks/exhaustive-deps": 0
+    "react-hooks/exhaustive-deps": 0,
+    "typescript-eslint/no-empty-interface": 0
   }
 }

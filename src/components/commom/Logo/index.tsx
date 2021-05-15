@@ -2,11 +2,13 @@ import * as React from 'react'
 import { IoTicketOutline } from 'react-icons/io5'
 import { Wrapper } from './styles'
 
-export default function Logo() {
+const Logo: React.FC<{ className?: string }> = (props) => {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <IoTicketOutline />
-      <h4>tickety</h4>
+      <span>tickety</span>
     </Wrapper>
   )
 }
+
+export default Logo

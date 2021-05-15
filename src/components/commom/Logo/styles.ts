@@ -15,7 +15,7 @@ export const Wrapper = styled(Link).attrs(() => ({
     color: var(--color-c1);
   }
 
-  h4 {
+  span {
     margin-left: calc(0.375rem + 0.004vw);
     font-family: var(--font-title);
     font-weight: var(--weight-bolder);
@@ -28,7 +28,7 @@ export const Wrapper = styled(Link).attrs(() => ({
 
   svg {
     font-size: calc(1.125rem +0.004vw);
-    color: var(--color-c2);
+    color: var(--color-c1);
     ${large} {
       font-size: 1.5rem;
     }

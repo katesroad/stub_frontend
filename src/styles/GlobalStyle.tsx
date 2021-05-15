@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: Epilogue, Roboto,Helvetica Neue,sans-serif;
+    font-family: Inter, Roboto,Helvetica Neue,sans-serif;
   }
   
   a,

@@ -29,7 +29,7 @@ export const Card = styled.div`
 `
 
 export const Error = styled.div`
-  color: var(--bs-red);
+  color: var(--color-c9);
   &:empty {
     display: none;
   }

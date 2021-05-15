@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: Roboto,Helvetica Neue,sans-serif;
+    font-family: Epilogue, Roboto,Helvetica Neue,sans-serif;
   }
   
   a,
@@ -75,6 +75,8 @@ const GlobalStyles = createGlobalStyle`
     --weight-bold: 500;
     --weight-normal: 400;
     --weight-thin: 300;
+    --text-font: Inter, Roboto,Helvetica Neue,sans-serif;
+    --title-font: Epilogue, Roboto,Helvetica Neue,sans-serif;
   }
 `
 export default GlobalStyles

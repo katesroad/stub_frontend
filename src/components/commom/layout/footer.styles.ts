@@ -6,7 +6,6 @@ const border = css`
 `
 
 export const Wrapper = styled.footer`
-  padding-top: calc(3rem + 1vw);
   color: var(--color-c2);
   background-color: var(--color-c12);
 

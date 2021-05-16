@@ -7,22 +7,28 @@ export const Wrapper = styled.div`
     align-items: center;
   }
 
-  .logo {
-    margin-left: 0.75rem;
+  .btn-expand {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+    color: var(--color-c2);
+    ${large} {
+      display: none;
+    }
   }
 
   nav {
     position: fixed;
     top: 0;
+    left: 0;
     height: 100vh;
     width: 50vw;
     max-width: 30rem;
     padding: 0 2rem;
-    background-color: var(--color-c12);
     box-shadow: 6px 0px 64px rgba(0, 0, 0, 0.08);
-    transition: all 0.25s ease-in;
-    left: 0;
     transform: translate(-100%, 0);
+    z-index: 2000;
+    background-color: var(--color-c12);
+    transition: all 0.25s ease-in;
 
     &.is-visible {
       transform: translate(0, 0);
@@ -72,15 +78,6 @@ export const Wrapper = styled.div`
         margin-bottom: 0;
         margin-right: 1.5rem;
       }
-    }
-  }
-
-  button {
-    margin-right: calc(0.375rem + 0.004vw);
-    font-size: 1.25rem;
-    color: var(--color-c1);
-    ${large} {
-      display: none;
     }
   }
 `

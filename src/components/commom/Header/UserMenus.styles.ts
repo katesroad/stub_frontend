@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
       align-items: center;
       &.user {
         margin-right: 0.5rem;
+        font-size: 1rem;
         color: var(--color-c3);
       }
     }
@@ -38,6 +39,7 @@ export const Wrapper = styled.div`
 export const MenuList = styled(ReachMenuList)`
   margin-top: 0.75rem;
   border-radius: 0.25rem;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 8px 15px rgba(0, 0, 0, 0.09);
   font-size: 1rem;
   text-transform: capitalize;
   color: var(--color-c2);

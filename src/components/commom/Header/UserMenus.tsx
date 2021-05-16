@@ -8,6 +8,9 @@ import { useAuth } from 'context/auth.context'
 const UserMenus: React.FC = () => {
   let { user } = useAuth()
   user = {
+    id: 'aa',
+    token: 'xx',
+    access: 'xx',
     username: 'tickety',
     avatar: 'https://avatars.githubusercontent.com/u/3837437?s=60&v=4',
   }
@@ -21,7 +24,8 @@ const UserMenus: React.FC = () => {
             <>
               <MenuButton className="menu-button">
                 <span className="user">
-                  <img src={user?.avatar} /> {user?.username}
+                  <img src={user?.avatar as string} />{' '}
+                  {user?.username as string}
                 </span>
                 <span aria-hidden>
                   {isExpanded ? <MdExpandLess /> : <MdExpandMore />}

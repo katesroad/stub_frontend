@@ -45,6 +45,7 @@ const GlobalStyles = createGlobalStyle`
   a,
   button {
     cursor: pointer;
+    background-color: transparent;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
   a {

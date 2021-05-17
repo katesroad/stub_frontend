@@ -6,6 +6,7 @@ import { UseMutationResult } from 'react-query'
 import { User } from 'types'
 import { Button, Error, Input } from 'components/commom'
 import { IoTicketOutline } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 type AuthFormProps = {
   mutation: UseMutationResult<User | null>
@@ -51,44 +52,53 @@ export default function AuthForm({ type, mutation }: AuthFormProps) {
         return (
           <Wrapper>
             <Form onFocus={getClearErrorHandler(props)}>
-              <IoTicketOutline className='icon'/>
-              <h2 className='form-title'>{getDescription(type).title}</h2>
-              <h3 className='form-description'>{getDescription(type).description}</h3>
+              <IoTicketOutline className="icon" />
+              <h2 className="form-title">{getDescription(type).title}</h2>
+              <h3 className="form-description">
+                {getDescription(type).description}
+              </h3>
               {type === 'register' ? (
                 <Input
-                  label='Full name'
-                  name='username'
-                  placeholder='Enter your Full name'
+                  label="Full name"
+                  name="username"
+                  placeholder="Enter your Full name"
                 />
               ) : null}
-              <Input label='email' name='email' placeholder='Enter your mail' />
+              <Input label="email" name="email" placeholder="Enter your mail" />
               <Input
-                label='password'
-                name='password'
-                placeholder='Enter your password'
-                type='password'
+                label="password"
+                name="password"
+                placeholder="Enter your password"
+                type="password"
               />
               {type === 'register' ? (
                 <Input
-                  label='Confirm Password'
-                  name='confirm'
-                  type='password'
-                  placeholder='Confirm your password'
+                  label="Confirm Password"
+                  name="confirm"
+                  type="password"
+                  placeholder="Confirm your password"
                 />
-              ) : loginStatus ? (<div className='information login-error'>Don’t remember your password?
-                <a href='/register'> reset it. </a>
-              </div>) : null}
+              ) : loginStatus ? (
+                <div className="information login-error">
+                  Don’t remember your password?
+                  <Link to="/register"> reset it. </Link>
+                </div>
+              ) : null}
               <p>
-                <Button onClick={() => setLoginStatus(true)} type='submit'>{type}</Button>
+                <Button onClick={() => setLoginStatus(true)} type="submit">
+                  {type}
+                </Button>
               </p>
-              <Error as='p'>{errMsg}</Error>
+              <Error as="p">{errMsg}</Error>
               {type === 'login' ? (
-                <div className='information'>Don’t have an account?
-                  <a href='/register'> sign up. </a>
+                <div className="information">
+                  Don’t have an account?
+                  <Link to="/register"> sign up. </Link>
                 </div>
               ) : (
-                <div className='information'>Already have an account?
-                  <a href='/login'> Log in. </a>
+                <div className="information">
+                  Already have an account?
+                  <Link to="/login"> Log in. </Link>
                 </div>
               )}
             </Form>

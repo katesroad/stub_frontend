@@ -25,3 +25,7 @@
 
 - Unit Testing: Jest \& react-testing-library
 - Integration Testing: Cypress
+
+## Potential issues to resolve
+
+- node-sass issue: Please refer to [solution](https://github.com/sass/node-sass/issues/1579)

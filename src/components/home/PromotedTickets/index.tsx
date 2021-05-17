@@ -1,12 +1,10 @@
 // eslint-disable-next-line
-import styled from 'styled-components/macro'
+import { Spinner } from 'components/commom'
 import * as React from 'react'
+import { FcNext, FcPrevious } from 'react-icons/fc'
+import Swiper, { SwiperRefNode } from 'react-id-swiper'
 import { Link } from 'react-router-dom'
 import { Ticket } from 'types'
-import Swiper, { SwiperRefNode } from 'react-id-swiper'
-import { FcPrevious } from 'react-icons/fc'
-import { FcNext } from 'react-icons/fc'
-import { Spinner } from 'components/commom'
 import { Wrapper } from './styles'
 
 type PromotedTicket = Pick<Ticket, 'id' | 'name' | 'imgs' | 'description'>
@@ -45,16 +43,17 @@ const PromotedTickets: React.FC<PromotedTicketsProps> = ({ tickets }) => {
     let loaded = 0
     // eslint-disable-next-line
     const imgItems: any[] = []
-    tickets?.map(({ imgs }, index) => {
+    tickets?.forEach(({ imgs }, index) => {
       imgItems.push(new Image())
       imgItems[index].onload = () => {
         loaded += 1
         if (loaded === tickets?.length) setIsLoaded(true)
       }
-      imgItems[index].src = imgs[0]
+      imgItems[index].src = imgs[0];
+      return;
     })
     return () => {
-      imgItems.map((item) => {
+      imgItems.forEach((item) => {
         // eslint-disable-next-line
         item = null
       })
@@ -74,14 +73,14 @@ const PromotedTickets: React.FC<PromotedTicketsProps> = ({ tickets }) => {
     if (ref?.current?.swiper !== null) {
       try {
         ref?.current?.swiper?.slideNext()
-      } catch (e) {}
+      } catch (e) { }
     }
   }
   const goPrev = () => {
     if (ref?.current?.swiper !== null) {
       try {
         ref?.current?.swiper?.slidePrev()
-      } catch (e) {}
+      } catch (e) { }
     }
   }
 

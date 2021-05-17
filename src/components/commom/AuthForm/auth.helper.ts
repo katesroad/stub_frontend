@@ -9,7 +9,6 @@ export const AuthSchema = Yup.object().shape({
   confirm: Yup.string()
     .oneOf([Yup.ref('password'), 'Password should be same.'])
     .required('Password confirm is required'),
-
 })
 
 export const initialValues = {

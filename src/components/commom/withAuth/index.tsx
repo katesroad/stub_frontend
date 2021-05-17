@@ -1,7 +1,7 @@
-import { useAuth } from 'context/auth.context'
-import * as React from 'react'
 import { AlertDialog, AlertDialogLabel } from '@reach/alert-dialog'
 import { Button } from 'components/commom'
+import { useAuth } from 'context/auth.context'
+import * as React from 'react'
 import LoginDialog from './LoginDialog'
 import './style.scss'
 
@@ -14,8 +14,11 @@ export function withAuth(
   element: React.ReactElement,
   options: WithAuthOptions
 ): React.ReactElement {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { user } = useAuth()
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [showDialog, setShowDialog] = React.useState(false)
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [showLoginForm, setShowLoginForm] = React.useState(false)
   // eslint-disable-next-line
   const cancelRef = React.useRef<any>()
@@ -25,6 +28,7 @@ export function withAuth(
     setShowDialog(false)
     setShowLoginForm(true)
   }
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   React.useEffect(() => {
     if (!user) {
       setShowLoginForm(false)

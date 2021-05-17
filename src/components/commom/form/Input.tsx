@@ -5,7 +5,6 @@ import { Error } from 'components/commom'
 import { FormControl } from './styles'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
-
 export interface InputProps {
   name: string
   label?: string

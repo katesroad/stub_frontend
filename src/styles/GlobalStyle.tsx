@@ -70,10 +70,46 @@ const GlobalStyles = createGlobalStyle`
     --color-c3: ${colors.c3};
     --color-c4: ${colors.c4};
     --color-c5: ${colors.c5};
+    --color-c6: ${colors.c6};
     --weight-bolder: 700;
     --weight-bold: 500;
     --weight-normal: 400;
     --weight-thin: 300;
   }
+
+  .container {
+    width: 100%
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1536px
+    }
+  }
+
 `
 export default GlobalStyles

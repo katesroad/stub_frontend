@@ -7,7 +7,6 @@ export interface User extends Record<string, unknown> {
 
 export type ReactQueryStatus = 'loading' | 'idle' | 'success' | 'error'
 
-export type TicketType = 'BUY' | 'SELL'
 export interface TicketData {
   imgs: string[]
   price: number
@@ -21,6 +20,10 @@ export interface Ticket extends TicketData {
   available: boolean
 }
 
+export type TicketType = 'BUY' | 'SELL'
+export interface UsersTicket extends Ticket {
+  type: TicketType
+}
 export enum OrderStatusEnum {
   waitForPayment = 'WaitForPayment',
   success = 'Success',

@@ -7,7 +7,7 @@ export default function IndexScreen() {
   const tickets = [
     {
       id: 'abc',
-      name: 'Gensis Ticket',
+      title: 'Gensis Ticket',
       imgs: [
         'https://res.cloudinary.com/dmossrfdg/image/upload/v1618562249/projects/yelp/251959.0.3dcbc371-a9d2-492e-b98d-749baf003e44.jpg',
       ],
@@ -15,7 +15,7 @@ export default function IndexScreen() {
     },
     {
       id: 'abcd',
-      name: 'Gensis Ticket',
+      title: 'Gensis Ticket',
       imgs: [
         'https://res.cloudinary.com/dmossrfdg/image/upload/v1618562249/projects/yelp/251959.0.3dcbc371-a9d2-492e-b98d-749baf003e44.jpg',
       ],
@@ -23,7 +23,7 @@ export default function IndexScreen() {
     },
     {
       id: 'abec',
-      name: 'Gensis Ticket',
+      title: 'Gensis Ticket',
       imgs: [
         'https://res.cloudinary.com/dmossrfdg/image/upload/v1618562249/projects/yelp/251959.0.3dcbc371-a9d2-492e-b98d-749baf003e44.jpg',
       ],
@@ -31,7 +31,7 @@ export default function IndexScreen() {
     },
     {
       id: 'abcf',
-      name: 'Gensis Ticket',
+      title: 'Gensis Ticket',
       imgs: [
         'https://res.cloudinary.com/dmossrfdg/image/upload/v1618562249/projects/yelp/251959.0.3dcbc371-a9d2-492e-b98d-749baf003e44.jpg',
       ],
@@ -39,7 +39,7 @@ export default function IndexScreen() {
     },
   ]
   const promotedTickets = tickets.map((ticket) => {
-    return { ...ticket, description: ticket.name + Math.random().toString() }
+    return { ...ticket, description: ticket.title + Math.random().toString() }
   })
 
   return (

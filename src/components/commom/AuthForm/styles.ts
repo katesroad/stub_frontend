@@ -15,6 +15,7 @@ export const Wrapper = styled('main')`
     margin-right: auto;
     border: var(--color-c7) 1px solid;
     border-radius: 0.25rem;
+    background-color: var(--color-c12);
     .form-title {
       padding-bottom: 0.5rem;
       margin-top: 0.5rem;

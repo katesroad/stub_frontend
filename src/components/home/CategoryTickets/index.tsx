@@ -4,15 +4,20 @@ import { Link } from 'react-router-dom'
 import { Ticket } from 'types'
 import { Wrapper } from './styles'
 
-type CategoryTicket = Pick<Ticket, 'name' | 'imgs' | 'category' | 'id'>
+type CategoryTicket = Pick<Ticket, 'title' | 'imgs' | 'category' | 'id'>
 
-const TicketItem: React.FC<CategoryTicket> = ({ id, name, imgs, category }) => {
+const TicketItem: React.FC<CategoryTicket> = ({
+  id,
+  title,
+  imgs,
+  category,
+}) => {
   return (
     <Link to={`/tickets/${id}`} className="ticket-item">
       <Card>
-        <img src={imgs[0]} alt={name} />
+        <img src={imgs[0]} alt={title} />
         <div className="ticket-intro">
-          <h6 className="ticket-name">{name}</h6>
+          <h6 className="ticket-name">{title}</h6>
           <p>
             <span className="ticket-category">{category}</span>
           </p>

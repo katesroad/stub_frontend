@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom'
 import { Ticket } from 'types'
 import { Wrapper } from './styles'
 
-type PromotedTicket = Pick<Ticket, 'id' | 'name' | 'imgs' | 'description'>
+type PromotedTicket = Pick<Ticket, 'id' | 'title' | 'imgs' | 'description'>
 
 const TicketItem: React.FC<PromotedTicket> = ({
   id,
-  name,
+  title,
   description,
   imgs,
 }) => {
@@ -27,7 +27,7 @@ const TicketItem: React.FC<PromotedTicket> = ({
         `}
       />
       <div className="desc">
-        <h6>{name}</h6>
+        <h6>{title}</h6>
         <p>{description}</p>
       </div>
     </Link>
@@ -49,8 +49,8 @@ const PromotedTickets: React.FC<PromotedTicketsProps> = ({ tickets }) => {
         loaded += 1
         if (loaded === tickets?.length) setIsLoaded(true)
       }
-      imgItems[index].src = imgs[0];
-      return;
+      imgItems[index].src = imgs[0]
+      return
     })
     return () => {
       imgItems.forEach((item) => {
@@ -73,14 +73,14 @@ const PromotedTickets: React.FC<PromotedTicketsProps> = ({ tickets }) => {
     if (ref?.current?.swiper !== null) {
       try {
         ref?.current?.swiper?.slideNext()
-      } catch (e) { }
+      } catch (e) {}
     }
   }
   const goPrev = () => {
     if (ref?.current?.swiper !== null) {
       try {
         ref?.current?.swiper?.slidePrev()
-      } catch (e) { }
+      } catch (e) {}
     }
   }
 

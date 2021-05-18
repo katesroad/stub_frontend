@@ -7,7 +7,8 @@ export interface User extends Record<string, unknown> {
 
 export type ReactQueryStatus = 'loading' | 'idle' | 'success' | 'error'
 
-interface TicketData {
+export type TicketType = 'BUY' | 'SELL'
+export interface TicketData {
   imgs: string[]
   price: number
   description: string

@@ -14,6 +14,4 @@ export const Title = styled.div`
 
 export const LayoutContent = styled.div`
   background-color: var(--color-c12);
-  border: 1px solid var(--color-c7);
-  border-radius: 0.25rem;
 `

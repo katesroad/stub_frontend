@@ -17,7 +17,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
     <>
       <Header />
       <Content
-        style={{ flexGrow: 1, marginBottom: 'calc(3rem + .5vw)' }}
+        style={{ flexGrow: 1, marginBottom: '.5vw', marginTop: '.5vw' }}
         as="main"
       >
         {title ? (

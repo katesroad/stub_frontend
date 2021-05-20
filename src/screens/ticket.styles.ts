@@ -5,8 +5,7 @@ export const Wrapper = styled.label`
   position: relative;
   padding: 3rem;
   margin: 2rem auto auto;
-
-
+  
   .title {
     width: 100%;
     height: 15rem;
@@ -89,6 +88,7 @@ export const Wrapper = styled.label`
     .content-title {
       font-weight: bold;
       font-size: large;
+      color: var(--color-c2);
     }
 
     .content-text {
@@ -126,12 +126,9 @@ export const Wrapper = styled.label`
         font-size: xx-small;
         color: var(--color-c3);
         line-height: 24px;
-
       }
     }
-
   }
-
 
   @media (max-width: 768px) {
     .title {
@@ -168,8 +165,6 @@ export const Wrapper = styled.label`
           height: 1rem;
         }
       }
-
-
     }
 
     .content {
@@ -185,7 +180,6 @@ export const Wrapper = styled.label`
         width: 100%;
         padding: 1rem 1rem 0;
       }
-
     }
   }
 

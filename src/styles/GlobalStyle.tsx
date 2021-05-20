@@ -5,26 +5,32 @@ const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    line-height:1;
-    box-sizing:border-box;
+    line-height: 1;
+    box-sizing: border-box;
   }
+
   body::-webkit-scrollbar {
     width: 8px;
   }
-    body::-webkit-scrollbar-track {
+
+  body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
+
   body::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
   }
+
   body {
-    font-family: Inter, Roboto,Helvetica Neue,sans-serif;
-    background-color: #E5E5E5;
+    font-family: Inter, Roboto, Helvetica Neue, sans-serif;
+    background-color: #fbfbfb;
   }
-   html, body {
+
+  html, body {
     height: 100%;
   }
+
   a,
   button,
   input,
@@ -32,9 +38,10 @@ const GlobalStyles = createGlobalStyle`
   textarea,
   img {
     outline: none;
-    border:none;
-    appearance:none;
+    border: none;
+    appearance: none;
   }
+
   ul,
   li {
     list-style: none;
@@ -46,15 +53,18 @@ const GlobalStyles = createGlobalStyle`
   button {
     cursor: pointer;
     background-color: transparent;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+
   a {
     color: inherit;
-    text-decoration:none;
+    text-decoration: none;
   }
+
   a:active {
     color: inherit
   }
+
   button[disabled] {
     cursor: not-allowed;
   }
@@ -82,8 +92,8 @@ const GlobalStyles = createGlobalStyle`
     --weight-bold: 500;
     --weight-normal: 400;
     --weight-thin: 300;
-    --text-font: Inter, Roboto,Helvetica Neue,sans-serif;
-    --title-font: Epilogue, Roboto,Helvetica Neue,sans-serif;
+    --text-font: Inter, Roboto, Helvetica Neue, sans-serif;
+    --title-font: Epilogue, Roboto, Helvetica Neue, sans-serif;
   }
 
   .container {

@@ -1,4 +1,4 @@
-import { Content } from 'components/commom'
+import { AppLayout, Content } from 'components/commom'
 import { CategoryTickets } from 'components/home/CategoryTickets'
 import PromotedTickets from 'components/home/PromotedTickets'
 import * as React from 'react'
@@ -43,11 +43,14 @@ export default function IndexScreen() {
   })
 
   return (
-    <Content>
-      <PromotedTickets tickets={promotedTickets} />
-      <CategoryTickets tickets={tickets} category={'concert'} />
-      <CategoryTickets tickets={tickets} category={'sports'} />
-      <CategoryTickets tickets={tickets} category={'shows'} />
-    </Content>
+    <AppLayout>
+      <Content>
+        <PromotedTickets tickets={promotedTickets} />
+        <CategoryTickets tickets={tickets} category={'concert'} />
+        <CategoryTickets tickets={tickets} category={'sports'} />
+        <CategoryTickets tickets={tickets} category={'shows'} />
+      </Content>
+    </AppLayout>
+
   )
 }

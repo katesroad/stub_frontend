@@ -1,4 +1,5 @@
 import AuthedApp from 'App.Authed'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import UnAuthedApp from 'App.UnAuthed'
 import { useAuth } from 'context/auth.context'
 import { Route, Switch } from 'react-router-dom'
@@ -12,7 +13,8 @@ function App() {
     <Switch>
       <Route path="/" exact component={IndexScreen} />
       <Route path="/tickets/:id" exact component={TicketScreen} />
-      {user ? <AuthedApp /> : <UnAuthedApp />}
+      {/*{user ? <AuthedApp /> : <UnAuthedApp />}*/}
+      <AuthedApp />
     </Switch>
   )
 }

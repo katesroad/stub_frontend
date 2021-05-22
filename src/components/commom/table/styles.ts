@@ -8,7 +8,8 @@ export const Wrapper = styled.div`
 
   table {
     background-color: var(--color-c12);
-
+    //table-layout: fixed;
+    //word-wrap: break-word;
     width: 100%;
     border-spacing: 0;
     border: 1px solid var(--color-c8);
@@ -53,7 +54,45 @@ export const Wrapper = styled.div`
     align-items: center;
     border: 1px solid var(--color-c8);
     border-top: 0;
-    padding: 0 1rem;
+    padding: 0 0 0 1rem;
+    background-color: var(--color-c12);
+    height: 3rem;
+
+    .page-control {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-left: 1px solid var(--color-c8);
+      padding-left: 1rem;
+
+      button {
+        border-left: 1px solid var(--color-c8);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .5rem .5rem .5rem 1rem;
+      }
+    }
+
+    .item-info {
+      border-right: 1px solid var(--color-c8);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .page-info {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
 
     input {
       width: 20px;
@@ -72,17 +111,18 @@ export const Wrapper = styled.div`
       align-items: center;
       display: flex;
       flex-direction: row;
+      height: 100%;
 
 
-      div {
-        background-color: var(--color-c8);
-        padding: 0 .8rem;
-        height: 3rem;
+      .page-count {
+        background-color: var(--color-c13);
+        padding: 0 1rem;
         align-items: center;
         display: flex;
+        height: 100%;
 
         select {
-          background-color: var(--color-c8);
+          background-color: var(--color-c13);
 
           option {
             padding: 1rem;

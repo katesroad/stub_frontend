@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, usePagination, useTable } from 'react-table'
 import { Wrapper } from './styles'
-import { BsChevronDown } from 'react-icons/all'
+import { AiFillCaretLeft, AiFillCaretRight, BsChevronDown } from 'react-icons/all'
 
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -75,7 +75,7 @@ export const Table = ({ columns, data, fetchData, pageCount: controlledPageCount
       <div className='pagination'>
         <div className='dropdown'>
           Items per page:
-          <div>
+          <div className='page-count'>
             <select
               value={pageSize}
               onChange={e => {
@@ -87,35 +87,32 @@ export const Table = ({ columns, data, fetchData, pageCount: controlledPageCount
                   {pageSize}
                 </option>
               ))}
-
             </select>
             <BsChevronDown className='icon' />
           </div>
 
-          <span>
+          <div className='item-info'>
             {(pageIndex) * pageSize + 1}-{(pageIndex + 1) * pageSize} of {pageOptions.length * pageSize} items
-        </span>
+          </div>
         </div>
-        <div>
-          <span>
-          page:
-            <input
-              type='number'
-              defaultValue={pageIndex + 1}
-              onChange={e => {
-                const page = e.target.value ? Number(e.target.value) - 1 : 0
-                gotoPage(page)
-              }}
-            />
-        </span>
-          <span>
+        <div className='page-control'>
+          <input
+            type='number'
+            defaultValue={pageIndex + 1}
+            onChange={e => {
+              const page = e.target.value ? Number(e.target.value) - 1 : 0
+              gotoPage(page)
+            }}
+          />
+          <BsChevronDown className='icon' />
+          <div className='page-info'>
             {pageIndex + 1} of {pageOptions.length} Pages
-        </span>
+          </div>
           <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-            {'<'}
+            <AiFillCaretLeft />
           </button>
           <button onClick={() => nextPage()} disabled={!canNextPage}>
-            {'>'}
+            <AiFillCaretRight />
           </button>
         </div>
       </div>

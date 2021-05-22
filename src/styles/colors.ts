@@ -10,5 +10,6 @@ const c9 = '#43BD25'
 const c10 = '#D32020'
 const c11 = '#ECBB0D'
 const c12 = '#fff'
+const c13 = '#f0f2f4'
 
-export const colors = { c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12 }
+export const colors = { c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13 }

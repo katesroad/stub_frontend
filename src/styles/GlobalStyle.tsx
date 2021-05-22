@@ -88,6 +88,7 @@ const GlobalStyles = createGlobalStyle`
     --color-c10: ${colors.c10};
     --color-c11: ${colors.c11};
     --color-c12: ${colors.c12};
+    --color-c13: ${colors.c13};
     --weight-bolder: 700;
     --weight-bold: 500;
     --weight-normal: 400;
